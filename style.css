@@ -1,0 +1,43 @@
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+  --background-color: hsl(var(--hue), var(--saturation), 20%);
+}
+
+body {
+  /* margin: 0; */
+  background-color: var(--background-color);
+}
+
+.paddle {
+  --position: 50;
+
+  width: 1vh;
+  height: 10vh;
+  position: absolute;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+  background-color: var(--foreground-color);
+}
+
+#player1 {
+  left: 1vw;
+}
+
+#player2 {
+  right:1vw;
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  transform: translate(-50%, -50%);
+  background-color: var(--foreground-color);
+}
