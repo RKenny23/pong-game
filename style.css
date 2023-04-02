@@ -8,6 +8,27 @@
 body {
   /* margin: 0; */
   background-color: var(--background-color);
+  overflow: hidden;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  color: var(--foreground-color);
+  font-size: 10vh;
+}
+
+.score > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 2vh;
+  margin: 1vh 0;
+  opacity: .5;
+}
+
+.score > :first-child {
+  text-align: right;
+  border-right: .5vh solid var(--foreground-color);
 }
 
 .paddle {
